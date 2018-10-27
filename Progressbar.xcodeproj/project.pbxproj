@@ -25,6 +25,7 @@
 		078FBB3E21844FBB000CC3BE /* statusbar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = statusbar.c; sourceTree = "<group>"; };
 		078FBB4321845160000CC3BE /* module.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
 		078FBB4421845227000CC3BE /* Progressbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progressbar.swift; sourceTree = "<group>"; };
+		078FBB4721845906000CC3BE /* Progressbar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Progressbar.playground; path = Progressbar/Example/Progressbar.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		078FBB0921844830000CC3BE /* Progressbar */ = {
 			isa = PBXGroup;
 			children = (
+				078FBB46218458B7000CC3BE /* Example */,
 				078FBB3921844FBB000CC3BE /* Dependencies */,
 				078FBB0A21844830000CC3BE /* Progressbar.h */,
 				078FBB4321845160000CC3BE /* module.map */,
@@ -83,6 +85,15 @@
 				078FBB3E21844FBB000CC3BE /* statusbar.c */,
 			);
 			path = progressbar;
+			sourceTree = "<group>";
+		};
+		078FBB46218458B7000CC3BE /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				078FBB4721845906000CC3BE /* Progressbar.playground */,
+			);
+			name = Example;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
