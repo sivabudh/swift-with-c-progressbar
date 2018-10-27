@@ -10,3 +10,5 @@ for _ in 1...max {
 }
 
 bar.finish()
+
+print("Finished!")

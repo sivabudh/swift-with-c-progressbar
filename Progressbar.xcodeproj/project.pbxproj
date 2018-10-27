@@ -32,6 +32,7 @@
 		078FBB4921845BAF000CC3BE /* libUtilitiesSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUtilitiesSDK.a; sourceTree = "<group>"; };
 		078FBB4A21845BAF000CC3BE /* DigipassSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigipassSDK.framework; sourceTree = "<group>"; };
 		078FBB4D21845BF2000CC3BE /* Onespan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onespan.swift; sourceTree = "<group>"; };
+		078FBB5321846A73000CC3BE /* Onespan.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Onespan.playground; path = Progressbar/Example/Onespan.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				078FBB4721845906000CC3BE /* Progressbar.playground */,
+				078FBB5321846A73000CC3BE /* Onespan.playground */,
 			);
 			name = Example;
 			path = "New Group";

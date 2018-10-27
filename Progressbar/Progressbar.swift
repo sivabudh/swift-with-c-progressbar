@@ -1,11 +1,3 @@
-//
-//  Progressbar.swift
-//  Progressbar
-//
-//  Created by Sivabudh Umpudh on 27/10/18.
-//  Copyright © 2018 Sivabudh Umpudh. All rights reserved.
-//
-
 import Foundation
 import Libprogressbar
 
