@@ -13,6 +13,9 @@
 		078FBB4121844FBB000CC3BE /* progressbar.c in Sources */ = {isa = PBXBuildFile; fileRef = 078FBB3D21844FBB000CC3BE /* progressbar.c */; };
 		078FBB4221844FBB000CC3BE /* statusbar.c in Sources */ = {isa = PBXBuildFile; fileRef = 078FBB3E21844FBB000CC3BE /* statusbar.c */; };
 		078FBB4521845227000CC3BE /* Progressbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078FBB4421845227000CC3BE /* Progressbar.swift */; };
+		078FBB4B21845BAF000CC3BE /* libUtilitiesSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078FBB4921845BAF000CC3BE /* libUtilitiesSDK.a */; };
+		078FBB4C21845BAF000CC3BE /* DigipassSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078FBB4A21845BAF000CC3BE /* DigipassSDK.framework */; };
+		078FBB4E21845BF2000CC3BE /* Onespan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078FBB4D21845BF2000CC3BE /* Onespan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		078FBB4321845160000CC3BE /* module.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
 		078FBB4421845227000CC3BE /* Progressbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progressbar.swift; sourceTree = "<group>"; };
 		078FBB4721845906000CC3BE /* Progressbar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Progressbar.playground; path = Progressbar/Example/Progressbar.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		078FBB4921845BAF000CC3BE /* libUtilitiesSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUtilitiesSDK.a; sourceTree = "<group>"; };
+		078FBB4A21845BAF000CC3BE /* DigipassSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigipassSDK.framework; sourceTree = "<group>"; };
+		078FBB4D21845BF2000CC3BE /* Onespan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onespan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078FBB4B21845BAF000CC3BE /* libUtilitiesSDK.a in Frameworks */,
+				078FBB4C21845BAF000CC3BE /* DigipassSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,7 @@
 				078FBB0A21844830000CC3BE /* Progressbar.h */,
 				078FBB4321845160000CC3BE /* module.map */,
 				078FBB0B21844830000CC3BE /* Info.plist */,
+				078FBB4D21845BF2000CC3BE /* Onespan.swift */,
 				078FBB4421845227000CC3BE /* Progressbar.swift */,
 			);
 			path = Progressbar;
@@ -71,6 +80,7 @@
 		078FBB3921844FBB000CC3BE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				078FBB4821845BAF000CC3BE /* onespan */,
 				078FBB3A21844FBB000CC3BE /* progressbar */,
 			);
 			path = Dependencies;
@@ -94,6 +104,15 @@
 			);
 			name = Example;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		078FBB4821845BAF000CC3BE /* onespan */ = {
+			isa = PBXGroup;
+			children = (
+				078FBB4921845BAF000CC3BE /* libUtilitiesSDK.a */,
+				078FBB4A21845BAF000CC3BE /* DigipassSDK.framework */,
+			);
+			path = onespan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078FBB4E21845BF2000CC3BE /* Onespan.swift in Sources */,
 				078FBB4521845227000CC3BE /* Progressbar.swift in Sources */,
 				078FBB4121844FBB000CC3BE /* progressbar.c in Sources */,
 				078FBB4221844FBB000CC3BE /* statusbar.c in Sources */,
@@ -318,12 +338,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Progressbar/Dependencies/onespan",
+				);
 				INFOPLIST_FILE = Progressbar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Progressbar/Dependencies/onespan",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = codium.Progressbar;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -332,6 +360,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				_DOC = YES;
 			};
 			name = Debug;
 		};
@@ -345,6 +374,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Progressbar/Dependencies/onespan",
+				);
 				INFOPLIST_FILE = Progressbar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,12 +385,17 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Progressbar/Dependencies/onespan",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = codium.Progressbar;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Progressbar";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				_DOC = YES;
 			};
 			name = Release;
 		};

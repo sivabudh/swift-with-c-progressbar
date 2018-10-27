@@ -3,3 +3,7 @@ module Libprogressbar [system] {
   export *
 }
 
+module Libonespan [system] {
+  header "Dependencies/onespan/DigipassSDK.framework/Headers/DP4Capi.h"
+  export *
+}
