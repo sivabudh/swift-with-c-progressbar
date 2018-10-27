@@ -12,6 +12,7 @@
 		078FBB4021844FBB000CC3BE /* statusbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 078FBB3C21844FBB000CC3BE /* statusbar.h */; };
 		078FBB4121844FBB000CC3BE /* progressbar.c in Sources */ = {isa = PBXBuildFile; fileRef = 078FBB3D21844FBB000CC3BE /* progressbar.c */; };
 		078FBB4221844FBB000CC3BE /* statusbar.c in Sources */ = {isa = PBXBuildFile; fileRef = 078FBB3E21844FBB000CC3BE /* statusbar.c */; };
+		078FBB4521845227000CC3BE /* Progressbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078FBB4421845227000CC3BE /* Progressbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		078FBB3C21844FBB000CC3BE /* statusbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statusbar.h; sourceTree = "<group>"; };
 		078FBB3D21844FBB000CC3BE /* progressbar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = progressbar.c; sourceTree = "<group>"; };
 		078FBB3E21844FBB000CC3BE /* statusbar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = statusbar.c; sourceTree = "<group>"; };
+		078FBB4321845160000CC3BE /* module.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
+		078FBB4421845227000CC3BE /* Progressbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progressbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +59,9 @@
 			children = (
 				078FBB3921844FBB000CC3BE /* Dependencies */,
 				078FBB0A21844830000CC3BE /* Progressbar.h */,
+				078FBB4321845160000CC3BE /* module.map */,
 				078FBB0B21844830000CC3BE /* Info.plist */,
+				078FBB4421845227000CC3BE /* Progressbar.swift */,
 			);
 			path = Progressbar;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				TargetAttributes = {
 					078FBB0621844830000CC3BE = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -160,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078FBB4521845227000CC3BE /* Progressbar.swift in Sources */,
 				078FBB4121844FBB000CC3BE /* progressbar.c in Sources */,
 				078FBB4221844FBB000CC3BE /* statusbar.c in Sources */,
 			);
@@ -293,6 +300,7 @@
 		078FBB1021844830000CC3BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -309,6 +317,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = codium.Progressbar;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Progressbar";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +327,7 @@
 		078FBB1121844830000CC3BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -333,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = codium.Progressbar;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Progressbar";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
